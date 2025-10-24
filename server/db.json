@@ -1,0 +1,64 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Product A",
+      "price": 29.99,
+      "category": "Electronics"
+    },
+    {
+      "id": 2,
+      "name": "Product B",
+      "price": 19.99,
+      "category": "Books"
+    },
+    {
+      "id": 3,
+      "name": "Product C",
+      "price": 49.99,
+      "category": "Clothing"
+    },
+    {
+      "id": 4,
+      "name": "Product D",
+      "price": 99.99,
+      "category": "Home Appliances"
+    },
+    {
+      "id": 5,
+      "name": "Product E",
+      "price": 15.99,
+      "category": "Toys"
+    },
+    {
+      "id": 6,
+      "name": "Smartphone X",
+      "price": 699.99,
+      "category": "Electronics"
+    },
+    {
+      "id": 7,
+      "name": "The Great Gatsby",
+      "price": 10.99,
+      "category": "Books"
+    },
+    {
+      "id": 8,
+      "name": "Jeans 501",
+      "price": 59.99,
+      "category": "Clothing"
+    },
+    {
+      "id": 9,
+      "name": "Air Fryer Pro",
+      "price": 89.99,
+      "category": "Home Appliances"
+    },
+    {
+      "id": 10,
+      "name": "Action Figure",
+      "price": 24.99,
+      "category": "Toys"
+    }
+  ]
+}
