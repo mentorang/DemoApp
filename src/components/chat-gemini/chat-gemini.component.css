@@ -1,0 +1,19 @@
+.chat-container {
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 6px;
+  max-width: 720px;
+}
+.messages {
+  max-height: 320px;
+  overflow: auto;
+  margin-bottom: 8px;
+}
+.message { margin: 6px 0; }
+.message .sender { font-size: 0.75rem; color: #666; }
+.message .text { padding: 8px; border-radius: 4px; display: inline-block; }
+.message.user .text { background: #e6f3ff; }
+.message.bot .text { background: #f3f3f3; }
+.input-row { display: flex; gap: 8px; }
+.input-row input { flex: 1 1 auto; padding: 8px; }
+.input-row button { padding: 8px 12px; }

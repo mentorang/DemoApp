@@ -1,1 +1,44 @@
-<p>add-product works!</p>
+<div class="card mt-3">
+	<div class="card-body">
+		<h5 class="card-title">Add Product</h5>
+
+		<form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+			<div class="mb-3">
+				<label for="name" class="form-label">Name</label>
+				<input id="name" type="text" class="form-control" formControlName="name" [class.is-invalid]="name?.touched && name?.invalid">
+				<div class="invalid-feedback" *ngIf="name?.touched && name?.invalid">
+					<div *ngIf="name?.errors?.['required']">Name is required.</div>
+					<div *ngIf="name?.errors?.['minlength']">Name must be at least 2 characters.</div>
+				</div>
+			</div>
+
+			<div class="mb-3">
+				<label for="price" class="form-label">Price</label>
+				<input id="price" type="number" step="0.01" class="form-control" formControlName="price" [class.is-invalid]="price?.touched && price?.invalid">
+				<div class="invalid-feedback" *ngIf="price?.touched && price?.invalid">
+					<div *ngIf="price?.errors?.['required']">Price is required.</div>
+					<div *ngIf="price?.errors?.['min']">Price must be greater than 0.</div>
+				</div>
+			</div>
+
+					<div class="mb-3">
+						<label for="category" class="form-label">Category</label>
+						<select id="category" class="form-select" formControlName="category" [class.is-invalid]="category?.touched && category?.invalid">
+							<option value="">Select category</option>
+							<option *ngFor="let c of categories" [value]="c">{{ c }}</option>
+						</select>
+						<div class="invalid-feedback" *ngIf="category?.touched && category?.invalid">
+							<div *ngIf="category?.errors?.['required']">Category is required.</div>
+							<div *ngIf="category?.errors?.['minlength']">Category must be at least 2 characters.</div>
+						</div>
+					</div>
+
+			<div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+
+			<button type="submit" class="btn btn-primary" [disabled]="submitting || form.invalid">
+				<span *ngIf="submitting" class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+				Add Product
+			</button>
+		</form>
+	</div>
+</div>

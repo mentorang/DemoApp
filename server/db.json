@@ -59,6 +59,12 @@
       "name": "Action Figure",
       "price": 24.99,
       "category": "Toys"
+    },
+    {
+      "id": 11,
+      "name": "mobile 1",
+      "price": 10000,
+      "category": "Electronics"
     }
   ]
 }

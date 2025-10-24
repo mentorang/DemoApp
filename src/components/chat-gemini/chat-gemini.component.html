@@ -1,0 +1,13 @@
+<div class="chat-container">
+  <div class="messages">
+    <div *ngFor="let m of messages" class="message" [class.user]="m.from === 'user'" [class.bot]="m.from === 'bot'">
+      <div class="sender">{{ m.from === 'user' ? 'You' : 'Gemini' }}</div>
+      <div class="text">{{ m.text }}</div>
+    </div>
+  </div>
+
+  <form class="input-row" (submit)="$event.preventDefault(); sendMessage()">
+    <input name="message" [(ngModel)]="message" placeholder="Type your message..." />
+    <button type="button" (click)="sendMessage()" [disabled]="loading">{{ loading ? 'Sending...' : 'Send' }}</button>
+  </form>
+</div>

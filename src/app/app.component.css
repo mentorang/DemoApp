@@ -1,0 +1,17 @@
+.navbar {
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-nav .nav-link.active {
+    font-weight: 500;
+    color: #fff !important;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
